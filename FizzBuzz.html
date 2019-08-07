@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fizzbuzz</title>
+</head>
+<body>
+  <canvas id="myCanvas" height="450" width="500" style="border: 1px solid black"></canvas>
+  <script>
+	function rectangle () {
+	var canvas = document.getElementById('myCanvas');
+	var context = canvas.getContext('2d');
+
+	var canvasWidth = canvas.width;
+	var canvasHeight = canvas.height;
+
+	for (i = 1; i <= 15; i++) {
+  	  context.fillStyle = 'rgba(200, 200, 200, 0.5)';
+  	  if (( i % 3 === 0 ) && ( i % 5 === 0 )){
+    	  context.fillStyle = 'rgba(0, 173, 61, 0.6)'
+  	};
+  	
+	if( i % 5 === 0 ){
+    	  context.fillStyle ='rgba(255, 237, 41, 0.6)'
+  	};
+  	
+	if ( i % 3 === 0 ){
+    	  context.fillStyle = 'rgba(37, 0, 148, 0.8)'
+  	};
+	
+	context.fillRect(canvasHeight*i/16,canvasHeight*i/16,canvasHeight*0.125,canvasHeight*0.125);
+	}
+  	return;
+	};
+
+rectangle();
+  </script>
+</body>
+</html>
